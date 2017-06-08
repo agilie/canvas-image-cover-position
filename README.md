@@ -1,6 +1,6 @@
 
 # Canvas image cover position
-It's method which calculate and return image position for fill canvas element like background-size cover
+This method is helpful for calculating image position for fitting canvas element. A behavior is same as css property 'background-size: cover;'
 
 ![Preview](img/Image.png)
 ![Preview](img/Image_cover.png)
@@ -17,8 +17,21 @@ $ npm install @agilie/canvas-image-cover-position
 ```
 ## How to use
 ```javascript
-var imagePosition = canvasImageCoverPosition(image.naturalWidth, image.NaturalHeight , canvas.width, canvas.height, 0.5, 0.5)
-canvas.getContext('2d').drawImage(image, imagePosition.offsetLeft, imagePosition.offsetTop, imagePosition.width, imagePosition.height);
+var imagePosition = canvasImageCoverPosition(
+image.naturalWidth,
+image.NaturalHeight,
+canvas.width,
+canvas.height,
+0.5,
+0.5
+)
+canvas.getContext('2d').drawImage(
+image,
+imagePosition.offsetLeft,
+imagePosition.offsetTop,
+imagePosition.width,
+imagePosition.height
+);
 ```
 <a href="https://agilie.github.io/canvas-image-cover-position/" style="font-size: 20px" target="_blank">demo</a>
 ## Troubleshooting
