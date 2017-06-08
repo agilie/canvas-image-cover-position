@@ -13,6 +13,7 @@ canvasHeight,
 [offsetLeft, offsetTop]
 )
 ```
+If the offsets are not specified, the image is centered
 ## Installation 
 Just add file or function to your project
 
