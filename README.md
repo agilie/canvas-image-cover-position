@@ -9,6 +9,12 @@ canvasImageCoverPosition(imageNaturalWidth, imageNaturalHeight , canvasWidth, ca
 ```
 ## Installation 
 Just add file or function to your project
+
+**or**
+
+```bash
+$ npm install @agilie/canvas-image-cover-position
+```
 ## How to use
 ```javascript
 var imagePosition = canvasImageCoverPosition(image.naturalWidth, image.NaturalHeight , canvas.width, canvas.height, 0.5, 0.5)
