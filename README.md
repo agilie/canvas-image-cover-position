@@ -45,7 +45,7 @@ imagePosition.height
 Problems? Check the [Issues](https://github.com/agilie/canvas-image-cover-position/issues) block 
 to find the solution or create an new issue that we will fix asap. Feel free to contribute.
 ## Author
-This Angular module is open-sourced by [Agilie Team](https://www.agilie.com) <info@agilie.com>
+This method is open-sourced by [Agilie Team](https://www.agilie.com) <info@agilie.com>
 ## Contributors
 [Bohdan Zolotukhyn](https://github.com/fargo23)
 ## License
