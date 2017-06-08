@@ -5,7 +5,13 @@ This method is helpful for calculating image position for fitting canvas element
 ![Preview](img/Image.png)
 ![Preview](img/Image_cover.png)
 ```javascript
-canvasImageCoverPosition(imageNaturalWidth, imageNaturalHeight , canvasWidth, canvasHeight, [offsetLeft, offsetTop])
+canvasImageCoverPosition(
+imageNaturalWidth,
+imageNaturalHeight,
+canvasWidth,
+canvasHeight,
+[offsetLeft, offsetTop]
+)
 ```
 ## Installation 
 Just add file or function to your project
