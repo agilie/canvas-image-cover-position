@@ -1,0 +1,26 @@
+{
+  "name": "@agilie/canvas-image-cover-position",
+  "version": "1.0.0",
+  "description": "It's method which calculate and return image position for fill canvas element like background-size cover",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agilie/canvas-image-cover-position"
+  },
+  "contributors": [
+    "Bohdan Zolotukhyn <bohdan.zolotukhin@agilie.com> (https://github.com/fargo23)"
+  ],
+  "keywords": [
+    "canvas",
+    "image",
+    "cover"
+  ],
+  "bugs": {
+    "url": "https://github.com/agilie/canvas-image-cover-position/issues"
+  },
+  "author": "Agilie Team <info@agilie.com> (https://agilie.com)",
+  "license": "MIT"
+}
