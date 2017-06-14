@@ -25,19 +25,19 @@ $ npm install @agilie/canvas-image-cover-position
 ## How to use
 ```javascript
 var imagePosition = canvasImageCoverPosition(
-image.naturalWidth,
-image.NaturalHeight,
-canvas.width,
-canvas.height,
-0.5,
-0.5
-)
+    image.naturalWidth,
+    image.naturalHeight,
+    canvas.width,
+    canvas.height,
+    0.5,
+    0.5
+);
 canvas.getContext('2d').drawImage(
-image,
-imagePosition.offsetLeft,
-imagePosition.offsetTop,
-imagePosition.width,
-imagePosition.height
+    image,
+    imagePosition.offsetLeft,
+    imagePosition.offsetTop,
+    imagePosition.width,
+    imagePosition.height
 );
 ```
 <a href="https://agilie.github.io/canvas-image-cover-position/" style="font-size: 20px" target="_blank">demo</a>
