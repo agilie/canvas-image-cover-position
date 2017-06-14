@@ -6,11 +6,11 @@ This method is helpful for calculating image position for fitting canvas element
 ![Preview](img/Image_cover.png)
 ```javascript
 canvasImageCoverPosition(
-imageNaturalWidth,
-imageNaturalHeight,
-canvasWidth,
-canvasHeight,
-[offsetLeft, offsetTop]
+    imageNaturalWidth,
+    imageNaturalHeight,
+    canvasWidth,
+    canvasHeight,
+    [offsetLeft, offsetTop]
 )
 ```
 If the offsets are not specified, the image is centered
