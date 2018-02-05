@@ -47,6 +47,6 @@ to find the solution or create an new issue that we will fix asap. Feel free to 
 ## Author
 This method is open-sourced by [Agilie Team](https://www.agilie.com) <info@agilie.com>
 ## Contributors
-[Bohdan Zolotukhyn](https://github.com/fargo23)
+[Agilie Team](https://github.com/agilie)
 ## License
 The [MIT](LICENSE) License (MIT) Copyright © 2017 [Agilie Team](https://www.agilie.com)
