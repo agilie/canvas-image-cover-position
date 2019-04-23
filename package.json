@@ -1,7 +1,7 @@
 {
   "name": "@agilie/canvas-image-cover-position",
   "version": "1.0.3",
-  "description": "It's method which calculate and return image position for fill canvas element like background-size cover",
+  "description": "It's method which calculate and return size object for fill one element by another like background-size cover",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,8 @@
   "keywords": [
     "canvas",
     "image",
-    "cover"
+    "cover",
+    "video"
   ],
   "bugs": {
     "url": "https://github.com/agilie/canvas-image-cover-position/issues"

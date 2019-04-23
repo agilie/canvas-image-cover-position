@@ -1,37 +1,38 @@
-/*
- * By Bohdan Zolotukhyn
- * 
- * A1,B1 = imgNaturalWidth,imgNaturalHeight - images natural width and height
- * A2,B2 = canvasWidth,canvasHeight - canvas width and height
- * A3,B3 - proportional values of the output image
- * offsetLeft - left offset in percent equal to background-position-x. Range(0-1)
- * offsetTop - top offset in percent equal to background-position-y. Range(0-1)
- *
- * If the offsets are not specified, the image is centered
- * var imagePosition = canvasImageCoverPosition(image.naturalWidth, image.NaturalHeight , canvas.width, canvas.height, [offsetLeft, offsetTop])
- * canvas.getContext('2d')
-   .drawImage(image, imagePosition.offsetLeft, imagePosition.offsetTop, imagePosition.width, imagePosition.height);
-*/
-function canvasImageCoverPosition (imgNaturalWidth, imgNaturalHeight , canvasWidth, canvasHeight, offsetLeft, offsetTop) {
-    var A1,A2,A3,B1,B2,B3,dA,dB;
-    offsetLeft = offsetLeft || 0.5;
-    offsetTop = offsetTop || 0.5;
-    A1 = imgNaturalWidth;
-    A2 = canvasWidth;
-    dA = A2 - A1;
-    B1 = imgNaturalHeight;
-    B2 = canvasHeight;
-    dB = B2 - B1;
-    if (dA < dB) {
-      B3 = B2;
-      A3 = A1 + (A1 * ((dB * 100) / B1)) / 100;
-    }
+
+// The MIT License (MIT) Copyright © 2019 Agilie Team https://www.agilie.com/
+
+;(function webpackUniversalModuleDefinition(root, factory) {
+    if(typeof exports === 'object' && typeof module === 'object')
+        module.exports = factory();
+    else if(typeof define === 'function' && define.amd)
+        define([], factory);
+    else if(typeof exports === 'object')
+        exports["getCoverSize"] = factory();
     else {
-      A3 = A2;
-      B3 = B1 + (B1 * ((dA * 100) / A1)) / 100;
+        root["canvasImageCoverPosition"] = root["getCoverSize"] = factory();
     }
-    return {width: A3, height:B3, offsetLeft: round((A2 - A3) * offsetLeft), offsetTop: round((B2 - B3) * offsetTop)};
-    function round(v) {
-      return (+(v >= 0) || -1) * Math.round(Math.abs(v));
-    }
-}
+})(window, function() {
+    return (function (contentWidth, contentHeight, containerWidth, containerHeight, offsetLeft, offsetTop) {
+            var contentRatio = contentWidth / contentHeight;
+            var containerRatio = containerWidth / containerHeight;
+            var resultHeight;
+            var resultWidth;
+            offsetLeft = typeof offsetLeft === 'undefined' ? 0.5 : offsetLeft;
+            offsetTop = typeof offsetTop === 'undefined' ? 0.5 : offsetTop;
+            if (contentRatio > containerRatio) {
+                resultHeight = containerHeight;
+                resultWidth = containerHeight * contentRatio;
+            }
+            else {
+                resultWidth = containerWidth;
+                resultHeight = containerWidth / contentRatio;
+            }
+            return {
+                width: resultWidth,
+                height: resultHeight,
+                offsetLeft:(containerWidth - resultWidth) * offsetLeft,
+                offsetTop: (containerHeight - resultHeight) * offsetTop
+            };
+        });
+});
+

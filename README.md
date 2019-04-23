@@ -1,22 +1,26 @@
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/agilie/canvas-image-cover-position)
 
-# Canvas image cover position
-This method is helpful for calculating image position for scaling it on the canvas. A behavior is the same as css property 'background-size: cover;'
+# Calculate cover size
+This method is helpful for calculating size and position of one element to fill another element. A behavior is the same as css property 'background-size: cover;'
 
 ![Preview](img/Image.png)
 ![Preview](img/Image_cover.png)
-```javascript
-canvasImageCoverPosition(
-    imageNaturalWidth,
-    imageNaturalHeight,
-    canvasWidth,
-    canvasHeight,
-    [offsetLeft, offsetTop]
-)
+```typescript
+type getCoverSize = (
+    contentWidth:number,
+    contentHeight:number,
+    containerWidth:number,
+    containerHeight:number,
+    offsetLeft:number = 0.5, 
+    offsetTop:number = 0.5) => void
 ```
-If the offsets are not specified, the image is centered
+Offsets values are in range between 0 an 1
 ## Installation 
 Just add file or function to your project
+
+```html
+<script src="https://unpkg.com/@agilie/canvas-image-cover-position"></script>
+```
 
 **or**
 
@@ -25,7 +29,9 @@ $ npm install @agilie/canvas-image-cover-position
 ```
 ## How to use
 ```javascript
-var imagePosition = canvasImageCoverPosition(
+import getCoverSize from '@agilie/canvas-image-cover-position'
+
+var imageCoverSize = getCoverSize(
     image.naturalWidth,
     image.naturalHeight,
     canvas.width,
@@ -35,10 +41,10 @@ var imagePosition = canvasImageCoverPosition(
 );
 canvas.getContext('2d').drawImage(
     image,
-    imagePosition.offsetLeft,
-    imagePosition.offsetTop,
-    imagePosition.width,
-    imagePosition.height
+    imageCoverSize.offsetLeft,
+    imageCoverSize.offsetTop,
+    imageCoverSize.width,
+    imageCoverSize.height
 );
 ```
 <a href="https://agilie.github.io/canvas-image-cover-position/" style="font-size: 20px" target="_blank">demo</a>
@@ -59,4 +65,4 @@ If you have any questions, suggestions or just need a help with web or mobile de
 We will continue publishing new open-source projects. Stay with us, more updates will follow!
 
 ## License
-The [MIT](LICENSE) License (MIT) Copyright © 2017 [Agilie Team](https://www.agilie.com)
+The [MIT](LICENSE) License (MIT) Copyright © 2019 [Agilie Team](https://www.agilie.com)
