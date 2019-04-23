@@ -1,6 +1,6 @@
 {
   "name": "@agilie/canvas-image-cover-position",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "It's method which calculate and return size object for fill one element by another like background-size cover",
   "main": "index.js",
   "scripts": {
