@@ -6,13 +6,20 @@ This method is helpful for calculating size and position of one element to fill 
 ![Preview](img/Image.png)
 ![Preview](img/Image_cover.png)
 ```typescript
+interface CoverSize = {
+    width: number;
+    height: number;
+    offsetLeft: number;
+    offsetTop: number;
+}
+
 type getCoverSize = (
-    contentWidth:number,
-    contentHeight:number,
-    containerWidth:number,
-    containerHeight:number,
-    offsetLeft:number = 0.5, 
-    offsetTop:number = 0.5) => void
+    contentWidth: number,
+    contentHeight: number,
+    containerWidth: number,
+    containerHeight: number,
+    offsetLeft: number = 0.5, 
+    offsetTop: number = 0.5) => CoverSize
 ```
 Offsets values are in range between 0 an 1
 ## Installation 
